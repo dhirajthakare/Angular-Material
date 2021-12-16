@@ -1,0 +1,170 @@
+<div style="overflow-y: hidden;">
+  
+
+
+
+  <mat-sidenav-container style="height: 100%;">
+    <mat-sidenav color="Warn" (opened)="state('open')" (closed)="state('close')" #slidebar class="sidebar" mode="side" [(opened)]="opened">
+      Sidebar
+    </mat-sidenav>
+
+    <mat-sidenav-content class="maincontent">
+     <div>
+      Main <br>
+      <button (click)="this.opened  =! this.opened">Open And Toggale</button>
+      <button (click)="slidebar.open()">open</button>
+      <button (click)="slidebar.close()">close</button>
+      <button (click)="slidebar.toggle()">Toggale</button>
+     </div>
+      <br> <br>
+      <mat-divider></mat-divider>
+     <h2>List Material</h2>
+     <mat-list>
+       <mat-list-item>
+        <mat-icon matListIcon>home</mat-icon>
+        <h3 matLine>Home</h3>
+      </mat-list-item>
+       <mat-divider></mat-divider>
+       <mat-list-item>
+        <mat-icon matListIcon>cloud</mat-icon>
+        <h3 matLine>about</h3>
+       </mat-list-item>
+       <mat-divider></mat-divider>
+       <mat-list-item>
+        <mat-icon matListIcon>menu</mat-icon>
+        <h3 matLine>Services</h3>
+       </mat-list-item>
+       <mat-divider></mat-divider>
+
+
+     </mat-list>
+
+  <div>
+    <br> <br>
+    <h1>Buttons</h1>
+  
+    <section>
+      <div class="example-label">Basic</div>
+      <div class="example-button-row">
+        <button mat-button>Basic</button>
+        <button mat-button color="primary">Primary</button>
+        <button mat-button color="accent">Accent</button>
+        <button mat-button disableRipple color="warn">Warn</button>
+        <button mat-button disabled>Disabled</button>
+        <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <section>
+      <div class="example-label">Raised</div>
+      <div class="example-button-row">
+        <button mat-raised-button>Basic</button>
+        <button mat-raised-button color="primary">Primary</button>
+        <button mat-raised-button color="accent">Accent</button>
+        <button mat-raised-button  color="warn">Warn</button>
+        <button mat-raised-button disabled>Disabled</button>
+        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <section>
+      <div class="example-label">Stroked</div>
+      <div class="example-button-row">
+        <button mat-stroked-button>Basic</button>
+        <button mat-stroked-button color="primary">Primary</button>
+        <button mat-stroked-button color="accent">Accent</button>
+        <button mat-stroked-button color="warn">Warn</button>
+        <button mat-stroked-button disabled>Disabled</button>
+        <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+    <section>
+      <div class="example-label">Flat</div>
+      <div class="example-button-row">
+        <button mat-flat-button>Basic</button>
+        <button mat-flat-button color="primary">Primary</button>
+        <button mat-flat-button color="accent">Accent</button>
+        <button mat-flat-button color="warn">Warn</button>
+        <button mat-flat-button disabled>Disabled</button>
+        <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+      </div>
+    </section>
+   
+    </div>
+    <br> <br>
+    <mat-divider></mat-divider>
+    <br> <br>
+    <section>
+      <div class="example-label">toggale exmaple</div>
+      <div class="example-button-row">
+        <mat-button-toggle>Basic</mat-button-toggle><br>
+        <mat-button-toggle #togleBtn >Basic</mat-button-toggle>{{togleBtn.checked}}<br>
+        <mat-button-toggle #togleBtn1 checked>Basic</mat-button-toggle>{{togleBtn1.checked}}<br>
+  
+          <h5>Toggale Groups single</h5>
+          <mat-button-toggle-group #togglebtn ="matButtonToggleGroup">
+            <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+            <mat-button-toggle  value="Nodejs">Nodejs</mat-button-toggle>
+            <mat-button-toggle value="Laravel">Laravel</mat-button-toggle>
+  
+          </mat-button-toggle-group>{{togglebtn.value}} <br>
+          <br>
+          <h5>Toggale Groups Multiple</h5>
+          <mat-button-toggle-group #toggleMltbtn ="matButtonToggleGroup" multiple >
+            <mat-button-toggle value="Angular">Angular</mat-button-toggle>
+            <mat-button-toggle  value="Nodejs">Nodejs</mat-button-toggle>
+            <mat-button-toggle value="Laravel">Laravel</mat-button-toggle>
+  
+          </mat-button-toggle-group>{{toggleMltbtn.value}} <br>
+  
+        <button mat-flat-button color="primary">Primary</button>
+        <button mat-flat-button color="accent">Accent</button>
+        <button mat-flat-button color="warn">Warn</button>
+        <button mat-flat-button disabled>Disabled</button>
+ 
+  
+      </div>
+    </section>
+    <br> <br>
+    <mat-divider></mat-divider>
+    <div>
+      <h4>Icons</h4>
+      <mat-icon color="primary" >grade</mat-icon>
+      <mat-icon>cake</mat-icon>
+    </div>
+    <br> <br>
+    <mat-divider></mat-divider>
+      <div>
+        <h2>badges uses</h2>
+    <span [matBadge]="notification" [matBadgeHidden]="notification == 0" > Notification </span><br><br>
+    <span matBadge="5" matBadgeColor="warn" matBadgeSize="small" > Notification </span> <br><br>
+    <span matBadge="5" matBadgeColor="accent" matBadgeSize="medium" > Notification </span> <br><br>
+    <span matBadge="5" matBadgeColor="warn" matBadgeSize="large" > Notification </span> <br><br>
+    <span matBadge="5" matBadgeColor="warn" matBadgePosition="below after" > Notification </span> <br><br>
+    <span matBadge="5" matBadgeColor="warn" matBadgePosition="below after" > Notification </span> <br><br>
+    <span matBadge="5" matBadgeColor="warn" matBadgePosition="below before" > Notification </span> <br><br>
+
+  </div>
+    <br> <br>
+    <div>
+      <h3>Spinner</h3>
+      <mat-spinner color="warn"></mat-spinner>
+      <!-- <mat-progress-spinner value="60"></mat-progress-spinner> -->
+    </div>
+<br>
+<br>
+    <mat-divider></mat-divider>
+    <div>
+      <h2>Progress Bar</h2>
+      <mat-progress-bar mode="determinate" value="40"></mat-progress-bar><br>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar><br>
+    <mat-progress-bar mode="buffer"></mat-progress-bar> <br>
+    <mat-progress-bar mode="query"></mat-progress-bar>
+    </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+
+
+
+
+</div>

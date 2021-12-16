@@ -1,0 +1,69 @@
+<section>
+    <h2> Simple Horizontal Stepper</h2>
+    <mat-horizontal-stepper>
+        <mat-step label ="Current Address">Product Current Address</mat-step>
+        <mat-step label="Shipping Address"> 
+            Product Shipping Address
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+    
+            </div>
+        </mat-step>
+        <mat-step label="Delivery Address">Product Delivery Address</mat-step>
+    
+    </mat-horizontal-stepper>
+</section>
+<section>
+    <h2> Linear Horizontal Stepper</h2>
+    <mat-horizontal-stepper linear>
+        <mat-step label ="Current Address" completed="true" >Product Current Address</mat-step>
+        <mat-step label="Shipping Address" completed="true" optional > 
+            Product Shipping Address
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+    
+            </div>
+        </mat-step>
+        <mat-step label="Delivery Address" completed="false">Product Delivery Address</mat-step>
+    
+    </mat-horizontal-stepper>
+</section>
+
+
+<br> <br>
+
+<section>
+    <h2>Simple Vertical Stepper</h2>
+    <mat-vertical-stepper>
+        <mat-step label ="Current Address">Product Current Address</mat-step>
+        <mat-step label="Shipping Address"> 
+            Product Shipping Address
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+    
+            </div>
+        </mat-step>
+        <mat-step label="Delivery Address">Product Delivery Address</mat-step>
+    
+    </mat-vertical-stepper>
+</section>
+<br> <br>
+<section>
+    <h2> Linear Vertical Stepper</h2>
+    <mat-vertical-stepper linear>
+        <mat-step label ="Current Address" completed="true" >Product Current Address</mat-step>
+        <mat-step label="Shipping Address" completed="true" optional > 
+            Product Shipping Address
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+    
+            </div>
+        </mat-step>
+        <mat-step label="Delivery Address" completed="false">Product Delivery Address</mat-step>
+    
+    </mat-vertical-stepper>
+</section>

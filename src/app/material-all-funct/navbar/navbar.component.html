@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="navbar">
+    <div>Material Design</div>
+    <div>
+      <button mat-button>HOME</button>
+      <button mat-button>ABOUT</button>
+      <button mat-button>Contact</button>
+      <button mat-button>carrier</button>
+      <button mat-button [matMenuTriggerFor]="subMenu" >languages</button>
+
+    </div>
+    <mat-menu #subMenu="matMenu">
+      <button mat-menu-item  [matMenuTriggerFor]="subAngularMenu" > Angular </button>
+      <button mat-menu-item> Nodejs </button>
+      <button mat-menu-item> Laravel </button>
+    </mat-menu>
+    <mat-menu #subAngularMenu="matMenu">
+      <button mat-menu-item> typescript </button>
+      <button mat-menu-item> observable </button>
+      <button mat-menu-item> subject </button>
+    </mat-menu>
+
+  </mat-toolbar>
