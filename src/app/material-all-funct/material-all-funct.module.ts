@@ -23,6 +23,8 @@ import { MatDatepickerModule  } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+
 
 import { AutocompletComponent } from './autocomplet/autocomplet.component';
 import { SomeBasiConceptsComponent } from './some-basi-concepts/some-basi-concepts.component';
@@ -91,8 +93,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatPaginatorModule,
     HttpClientModule,
     MatSortModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    MatAutocompleteModule
     
   ]
 })

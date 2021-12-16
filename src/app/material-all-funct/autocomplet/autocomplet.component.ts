@@ -9,6 +9,14 @@ export class AutocompletComponent implements OnInit {
 
   constructor() { }
 
+  options:any = ["angular","Laravel","Expressjs"];
+  optionsObject:any = [
+    {name:"Angular"},
+    {name:"Laravel"},
+    {name:"Nodejs"},
+    {name:"Laavel"}
+  ];
+
   ngOnInit(): void {
   }
 
