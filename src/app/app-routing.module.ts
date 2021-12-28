@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GoogleMapComponent } from './google-map/google-map.component';
 import { AutocompletComponent } from './material-all-funct/autocomplet/autocomplet.component';
 import { DataGridComponent } from './material-all-funct/data-grid/data-grid.component';
 import { DialogExmapleComponent } from './material-all-funct/dialog-exmaple/dialog-exmaple.component';
@@ -26,7 +27,9 @@ const routes: Routes = [
     {path:'matstepper',component:MatStepperComponent},
     {path:'matforms',component:MatFormsComponent},
     {path:'matdia',component:DialogExmapleComponent},
-    {path:'datagrid',component:DataGridComponent}
+    {path:'datagrid',component:DataGridComponent},
+    {path:'googlemap',component:GoogleMapComponent}
+
 
 
 
